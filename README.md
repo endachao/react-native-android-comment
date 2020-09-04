@@ -1,17 +1,32 @@
 # react-native-android-comment
 
+
+一个用于获取 Android apk 渠道信息的包
+
+渠道打包流程
+
+后台 PHP 往 apk 写入了一个 zip comment 信息，然后使用此包获取
+
+
 ## Getting started
 
-`$ npm install react-native-android-comment --save`
+`$ yarn add git+https://github.com/endachao/react-native-android-comment.git`
 
-### Mostly automatic installation
+## Update
 
-`$ react-native link react-native-android-comment`
+`$ yarn upgrade react-native-android-comment`
+
 
 ## Usage
-```javascript
-import ReactNativeAndroidComment from 'react-native-android-comment';
 
-// TODO: What to do with the module?
-ReactNativeAndroidComment;
+```javascript
+import androidGetComment from 'react-native-android-comment';
+
+
+androidGetComment().then(res=>{
+  console.log('androidGetComment',res)
+}).catch(e=>{
+  console.log(e)
+})
+
 ```

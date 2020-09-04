@@ -1,5 +1,8 @@
-import { NativeModules } from 'react-native';
+import {NativeModules} from 'react-native';
 
-const { ReactNativeAndroidComment } = NativeModules;
+const {ReactNativeAndroidComment} = NativeModules;
 
-export default ReactNativeAndroidComment;
+export default function () {
+    console.log('ReactNativeAndroidComment.getComment');
+    return ReactNativeAndroidComment.getComment();
+};
